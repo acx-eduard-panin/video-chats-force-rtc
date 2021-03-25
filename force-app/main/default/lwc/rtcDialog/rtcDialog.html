@@ -1,0 +1,22 @@
+<template>
+	<lightning-combobox label="Users" options={options} onchange={selectUser}></lightning-combobox>
+	<lightning-button-group class="slds-align_absolute-center slds-p-around_medium">
+		<lightning-button label="Create Connection" disabled={disableConnection} onclick={createOffer}></lightning-button>
+		<lightning-button label="Refresh" onclick={refresh}></lightning-button>
+	</lightning-button-group>
+	<lightning-datatable key-field="id" columns={columns} data={connectionData} onrowaction={rowAction}></lightning-datatable>
+	<div class="videos">
+		<iframe data-id="video" src={localVideoUrl} class="video-container"></iframe>
+	</div>
+	<lightning-button-group class="slds-align_absolute-center slds-p-around_medium">
+		<lightning-button-icon variant="brand" icon-name="utility:end_call" onclick={cancelCall}></lightning-button-icon>
+		<lightning-button-stateful
+				label-when-off="Mute"
+				label-when-on="Unmute"
+				icon-name-when-off="utility:muted"
+				icon-name-when-on="utility:unmuted"
+				selected={mute}
+				onclick={onmute}>
+		</lightning-button-stateful>
+	</lightning-button-group>
+</template>

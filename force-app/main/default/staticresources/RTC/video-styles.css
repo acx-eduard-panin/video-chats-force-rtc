@@ -1,0 +1,23 @@
+#localVideo {
+    max-width: 420px;
+}
+#localVideo.connected {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    margin-left: 23.5rem;
+    margin-top: 24rem;
+}
+.videos {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+#remoteVideo {
+    max-width: 100%;
+}
